@@ -25,6 +25,8 @@
 {
     width: 1200px;
     margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .navbar{
@@ -95,10 +97,10 @@ a{
 .faded-text{
     user-select: none;
     font-size: 7em;
-    color: rgb(231,231,231);
+    color: rgb(211, 205, 205);
 
-    bottom: -16%;
-    left: -5%;
+    bottom: -12%;
+    left: -4%;
     font-weight: bold;
     transition: all 3s;
 }
@@ -193,7 +195,7 @@ position: relative;
 
 .user-img-class{
     
-    width: 400px;
+    width: 300px;
     z-index: -12;
 }
 
@@ -267,7 +269,7 @@ position: relative;
 
 .icon-plus{
     left: 50%;
-    right: 50%;
+    top: -0.8rem;
     z-index: 12;
     animation-name: 
     animationPlus;
@@ -277,15 +279,12 @@ position: relative;
 }
 
 @keyframes animationPlus {
-    0%{
-        transform:  translateY(0px);
-    }
+    
     50%{
-        transform:  translateY(-12px);
+        top:3%;
+        left: 40%;
     }
-    100%{
-        transform:  translateY(0px);
-    }
+    
 }
 
 .icon-circle{
@@ -331,4 +330,195 @@ position: relative;
         left: 5%;
     }
     
+}
+
+.project-section{
+    
+    margin-top: 4rem;
+    background-color: rgb(231, 231, 231);
+}
+.page-header{
+    color: var(--bgOrange);
+    padding-top: 30px;
+    text-align: center;
+    font-size: 90px;
+}
+
+.project-container{
+    max-width: 1100px;
+    /* it make center */
+    margin: 0 auto;
+    padding: 3rem 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+
+}
+
+.project-card{
+    position: relative;
+    width: 90%;
+    height: 550px;
+    background-image: url(/Asset/project.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 40px #1f1f1f57 ;
+
+}
+
+.project-card::after{
+    content: "";
+    position: absolute; 
+    /* it will take alll the size of project card for tilled effect */
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #1f1f1fb1;
+    z-index: 0;
+    /* transform: scaleX(1); */
+}
+
+.project-card::before{
+    content: "";
+    position: absolute;
+    /* it will take alll the size of project card for tilled effect */
+    left: 0;
+    right: 0;
+    top: 0; 
+    bottom: 0;
+    background: linear-gradient(40deg,#3573efbb,#3abcf99c,#3abcf96f);
+    /* hover karne ke bad hi dikhe eske liye */
+    transform: scaleX(0);
+    /* mouse hover hone ke bad colour left se right jayega */
+    transform-origin: left;
+    transition: all 0.4s;
+    z-index: 1;
+}
+
+.project-card:hover::before{
+    /* before me kya change honge */
+    transform: scaleX(1);
+}
+.project-number{
+    color: rgba(255, 255, 255, 0.632);
+    /* image chya var number  */
+    position: absolute;
+    font-size: 180px;
+    font-weight: 300px;
+    z-index: 2;
+    display: none;
+    transition: all 0.4s;
+}
+.project-card:hover .project-number
+{
+    display: block;
+
+}
+
+.project-number-right{
+    right: 0;
+    top: -30px;
+}
+
+.project-number-left{
+    left: 0;
+    top: -30px;
+}
+
+.project-content{
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scale(0.9);
+    position: absolute;
+    display: flex;
+    /* it will be display one by another */
+    flex-direction: column;
+    color: white;
+    padding: 2em;
+    bottom: 20%;
+    gap: 1em;
+    z-index: 5;
+    transition: all 0.4s;
+    display: none;
+ }
+
+ .project-skill-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+ }
+
+.project-skill{
+    width: 40px;
+}
+.project-card:hover .project-content{
+    transform: scale(1);
+    display: block;
+}
+ .project-content-left{
+    left: 10%;
+    width: 45%;
+
+ }
+ .project-content-right{
+    right: 10%;
+    width: 45%;
+ }
+
+ .project-card-right{
+    right: -10%;
+ }
+ .project-heading{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+ }
+
+ .project-subHeading{
+    font-size: 16px;
+    font-style: italic;
+ }
+
+.btn-group
+{
+    display:flex ;
+    gap:0.9rem;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.btn-project:hover{
+    border: none;
+}
+
+.icon{
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+   transition: all 0.5s;
+  
+}
+
+.icon:hover{
+    color: var(--bgOrange);
+
+}
+
+#project1{
+    background-image: url(Asset/project1.jpg);
+}
+
+#project2{
+    background-image: url(Asset/project2.jpg);
+}
+
+#project3{
+    background-image: url(Asset/project3.jpg);
+}
+
+#project4{
+    background-image: url(Asset/project1.jpg);
 }
