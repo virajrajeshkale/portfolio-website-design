@@ -87,7 +87,7 @@ a{
     align-items: center;
 
     gap: 5rem;
-    margin: 4 auto;
+    margin: 4rem auto;
     padding: 0 1rem;
     padding-bottom: 8rem;
 }
@@ -191,8 +191,9 @@ position: relative;
     animation: scaleImage 5s linear infinite;
 }
 
-.user-image img{
-    width: 300px;
+.user-img-class{
+    
+    width: 400px;
     z-index: -12;
 }
 
@@ -218,7 +219,7 @@ position: relative;
 }
 
 .icon-dots{
-    z-index: -12;
+    z-index: 12;
     bottom: -1rem;
     right: 0;
     animation-name: dotsAnimation;
@@ -236,6 +237,98 @@ position: relative;
     }
     100%{
         transform: translate(0px);
+    }
+    
+}
+
+.icon-cube {
+    /* left: 0; */
+    z-index: 12;
+    right: 1.2em;
+    animation-name: cubeRotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes cubeRotate {
+
+    0%{
+        transform: rotateZ(0deg) translateY(0px);
+    }
+    50%{
+        transform: rotateZ(180deg) translateY(-12px);
+    }
+    100%{
+        transform: rotateZ(360deg) translateY(0px);
+    }
+    
+}
+
+.icon-plus{
+    left: 50%;
+    right: 50%;
+    z-index: 12;
+    animation-name: 
+    animationPlus;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes animationPlus {
+    0%{
+        transform:  translateY(0px);
+    }
+    50%{
+        transform:  translateY(-12px);
+    }
+    100%{
+        transform:  translateY(0px);
+    }
+}
+
+.icon-circle{
+    z-index: 12;
+    bottom: 0;
+    left: 0;
+    animation-name: animateCircle;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-timing-function:linear;
+}
+
+@keyframes animateCircle {
+    0%{
+        scale: 1;
+       left: 0;
+       bottom: 0;
+    }
+    50%{
+        scale: 2;
+        left: 5%;
+        bottom: 7%;
+    }
+    100%{
+        scale: 1;
+        left: 0;
+       bottom: 0;
+    }
+}
+
+.icon-zigzags
+{
+    top: 1.5em;
+    left: -0.3em;
+    z-index: 12;
+    animation : animateZigzags 5s ease-in infinite;
+
+}
+
+@keyframes animateZigzags {
+    50%{
+        top: 2%;
+        left: 5%;
     }
     
 }
