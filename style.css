@@ -5,7 +5,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Be Vietnam Pro", sans-serif;
-   
+   scroll-behavior: smooth ;
+
 }
 
 :root{
@@ -89,7 +90,7 @@ a{
     align-items: center;
 
     gap: 5rem;
-    margin: 4rem auto;
+    margin: 3rem auto;
     padding: 0 1rem;
     padding-bottom: 8rem;
 }
@@ -97,10 +98,10 @@ a{
 .faded-text{
     user-select: none;
     font-size: 7em;
-    color: rgb(211, 205, 205);
-
-    bottom: -12%;
-    left: -4%;
+    color: rgba(231,231,231);
+    z-index: -1;
+    bottom: -15%;
+    left: 0%;
     font-weight: bold;
     transition: all 3s;
 }
@@ -109,9 +110,10 @@ a{
     display: flex;
    flex-direction: column ;
    justify-content: center;
-   gap: 2rem;
+   gap: 0.8rem;
 }
 .hero-section-heading{
+    user-select: none;
     font-size: 35px;
     color: #343d68;
     font-weight: 500;
@@ -119,6 +121,7 @@ a{
 }
 
 .hero-section-sub-heading{
+    user-select: none;
     font-size: 45px;
     line-height: 45px;
 }
@@ -333,11 +336,11 @@ position: relative;
 }
 
 .project-section{
-    
-    margin-top: 4rem;
-    background-color: rgb(231, 231, 231);
+        background-color: rgb(231, 231, 231);
+        padding-bottom: 50px;
 }
 .page-header{
+    user-select: none;
     color: var(--bgOrange);
     padding-top: 30px;
     text-align: center;
@@ -388,7 +391,8 @@ position: relative;
     right: 0;
     top: 0; 
     bottom: 0;
-    background: linear-gradient(40deg,#3573efbb,#3abcf99c,#3abcf96f);
+  
+    background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
     /* hover karne ke bad hi dikhe eske liye */
     transform: scaleX(0);
     /* mouse hover hone ke bad colour left se right jayega */
@@ -441,7 +445,7 @@ position: relative;
     gap: 1em;
     z-index: 5;
     transition: all 0.4s;
-    display: none;
+
  }
 
  .project-skill-container {
@@ -456,6 +460,7 @@ position: relative;
 }
 .project-card:hover .project-content{
     transform: scale(1);
+    
     display: block;
 }
  .project-content-left{
@@ -472,12 +477,14 @@ position: relative;
     right: -10%;
  }
  .project-heading{
+    user-select: none;
     font-size: 50px;
     font-weight: bold;
     line-height: 3rem;
  }
 
  .project-subHeading{
+    user-select: none;
     font-size: 16px;
     font-style: italic;
  }
@@ -521,4 +528,341 @@ position: relative;
 
 #project4{
     background-image: url(Asset/project1.jpg);
+}
+
+/* ## SKILLS SECTION */
+.skills-container{
+    padding-top: 15rem;
+    position: relative;
+    display: flex;
+    margin: 0rem auto;
+    gap: 30px;
+    padding-bottom:5rem;
+     
+}
+.skills-container-faded-text{
+    position: absolute;
+    user-select: none;
+    font-style: bold;
+    font-size: 10em;
+    z-index: -1;
+    color: rgba(231,231,231);
+    right: 0;
+    top: -7%;
+    font-weight: bold;
+    transition: all 3s;
+
+}
+.skills-heading{
+    user-select: none;
+     user-select: none;
+    font-size: 40px;
+    position: relative;
+    z-index: -9;
+    color: var(--bgOrange);
+    line-height: 50px;
+}
+.skills-heading span{
+    user-select: none;
+    font-size: 55px;
+    font-weight: bold;
+}
+.skills-container-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.skills-container-description {
+    width: 85%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.skills-container-right{
+    
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 2rem;
+}
+
+.skills-logo{
+    user-select: none;
+    flex-wrap: wrap;
+    gap:20px;
+    width: 80px;
+    transition: all 0.4s;
+}
+
+.skills-logo:hover {
+    scale: 1.2;
+}
+
+
+.blob-style{
+    /* width: 15em; */
+    z-index: -1;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    animation: bolbAnimate 3s linear infinite ;
+}
+
+@keyframes bolbAnimate{
+    50%{
+        top: 15%;
+        left: 38%;
+    }
+}
+
+.contact-form-section{
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+}
+
+.contact-form-heading{
+    user-select: none;
+    font-size: 5em;
+    color: var(--bgOrange);
+    padding-top: 2rem;
+}
+
+.contact-form-sub-heading
+{   user-select: none;
+    font-size: 3rem;
+    color: #343dc68a;
+    text-transform: capitalize;
+}
+
+.contact-form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 70%;
+    margin: 2rem 5rem;
+}
+
+.fromfiled-container{
+    width: 100%;
+}
+
+.formfiled{
+  width: 100%;
+  height: 42px;
+  padding: 0 2rem;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 7px 0px #00000085;
+  border: none;
+  margin-top: 17px;
+
+}
+
+.formfiled-textarea{
+    height: auto;
+    padding-top: 1rem;
+}
+
+#submit-btn{
+    border: none;
+    font-size: 1.2rem;
+    margin: 2.5rem 0;
+}
+#submit-btn:hover{
+    scale: 0.9;
+}
+#submit-btn i{
+    padding-left: 8px;
+}
+
+/* ## FOOTER section */
+
+.footer-warpper{
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+   padding: 1.2rem;
+   justify-content: space-between;
+}
+
+footer{
+    color: white;
+    position: relative ;
+    margin-top: -1px;
+    padding: 5em;
+    background-color: #343d68;
+}
+
+.footer-faded-text{
+    color: #535c87;
+    user-select: none;
+    font-size: 5rem;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+.link-warpper {
+    display: flex;
+    gap: 1.2rem;
+
+}
+
+.link-warpper a{
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+.link-warpper div a:hover{
+    color: var(--bgOrange);
+    text-decoration: none;
+    
+}
+
+.icon-wrapper {
+   display: flex;
+   gap: 1rem;
+    
+}
+
+
+/* ###### Tablet Screen  */
+
+@media(max-width:1300px)
+{  .btn-pink{
+    margin-top: 10px;
+    margin:0 auto;
+    display:block;
+}
+    .container{
+        justify-content: center;
+        padding: 30px;
+        width: 100%;
+    }
+    .hero-section{
+        display: flex;
+        flex-direction: column ;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+       
+    }
+    .hero-section-description{
+        padding-top: 30px;
+        width: 60%;
+        margin:0 auto;
+        display:block;
+       /* margin-left: 22%; */
+        
+    } 
+    .hero-section-right{
+        margin: 0;
+    }
+    
+    .page-header{
+        padding-top: 30px;
+        color: var(--bgOrange);
+        text-align: center;
+        font-size: 50px;
+    }
+    
+    .project-container{
+        padding: 5px;
+        margin: 10px;
+        gap: 60px;
+        align-items: center;
+       
+    }
+    .project-card{
+       
+        width: 90%;
+        background-size: cover;
+        background-position: center;
+    }
+    .project-content{
+        scale: 1;
+        left: 0;
+    }
+    .project-content-left {
+        left: 0;
+    }
+    .project-heading{
+        font-size: 40px;
+        width: 100%;
+    }
+    .project-subHeading{
+        user-select: none;
+        width: 100%;
+    }
+    .faded-text{
+        bottom: -12%;
+    }
+   
+    #project2{
+        left: 0;
+        margin-left: 0;
+    }
+    #project4{
+        left: 0;
+        margin-left: 0;
+    }
+}
+
+@media(max-width:430px)
+{
+    .container{
+        margin: 0;
+        width: 100%;
+        align-items: center;
+    }
+    .nav-item{
+        display: none;
+    }
+    .logo{
+        width: 70px;
+    }        
+    
+    .logo-text
+    {   margin-left: -15px;
+        font-size: 18px;
+    }
+    .hero-section-head-text{
+        padding: 0;
+        font-size: 20px
+
+    }
+    .hero-section-sub-heading{
+        padding: 0;
+        font-size: 22px;
+        margin: 0;
+    }
+    .hero-section-description{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    #btn{
+        font-size: 14px;
+        padding: 4px 8px 4px 8px;
+    }
+    .user-image {
+        margin: 0;
+        padding: 0;
+        /* width: 300px; */
+    }
+    .user-image img{
+        /* width: 230px; */
+    }
 }
